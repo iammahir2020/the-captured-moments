@@ -1,0 +1,14 @@
+.navbar{
+background-color: #0D1321;
+}
+.navbar a{
+    font-size: 18px;
+}
+.icon{
+font-size: 25px;
+margin-right: 10px;
+}
+.dropItem{
+    display: flex;
+    align-items: center;
+}

@@ -1,10 +1,54 @@
 import React from "react";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import "./Header.css";
+import logoLight from "../../../images/logoLight.png";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faFacebookSquare,
+  faPinterest,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
   return (
-    <div>
-      <h2>HEADER</h2>
-    </div>
+    <Navbar className="navbar" collapseOnSelect expand="lg" variant="dark">
+      <Container>
+        <Navbar.Brand as={NavLink} to="/">
+          <img src={logoLight} style={{ height: "40px" }} alt="logoLight" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mx-auto">
+            <Nav.Link as={NavLink} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/checkout">
+              Check Out
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/about">
+              About Me
+            </Nav.Link>
+          </Nav>
+          <Nav className="mx-auto">
+            <Nav.Link as={NavLink} to="/">
+              Login
+            </Nav.Link>
+          </Nav>
+          <Nav className="social">
+            <Nav.Link href="https://www.instagram.com/" target="blank">
+              <FontAwesomeIcon className="icon" icon={faInstagram} />
+            </Nav.Link>
+            <Nav.Link href="https://www.facebook.com/" target="blank">
+              <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
+            </Nav.Link>
+            <Nav.Link href="https://www.pinterest.com/" target="blank">
+              <FontAwesomeIcon className="icon" icon={faPinterest} />
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
