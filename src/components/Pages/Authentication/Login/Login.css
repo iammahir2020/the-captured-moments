@@ -9,7 +9,15 @@
     background-color: white;
     border: 3px solid #18223b;
 }
-
+.reset-btn{
+    background-color: white;
+    border: none;
+    color: #18223b;
+    font-weight: 700;
+}
+.reset-btn:hover{
+    text-decoration: underline;
+}
 .form-toggle{
     margin-top: 20px;
     color: rgb(134, 134, 134);
@@ -60,6 +68,9 @@
     width: 100%;
     font-weight: 700;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn-facebook{
     background-color: rgb(42, 133, 230);

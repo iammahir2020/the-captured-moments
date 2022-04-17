@@ -3,10 +3,18 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import logoLight from "../../../images/logoLight.png";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
+import auth from "../../../firebase.init";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [user, loading, error] = useAuthState(auth);
+
+  const handleLogOut = () => {
+    signOut(auth);
+  };
+
   return (
     <Navbar
       sticky="top"
@@ -36,12 +44,15 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <button className="nav-btn" onClick={() => navigate("/login")}>
-              Login
-            </button>
-            <button className="nav-btn" onClick={() => navigate("/register")}>
-              Logout
-            </button>
+            {user ? (
+              <button className="nav-btn" onClick={handleLogOut}>
+                Logout
+              </button>
+            ) : (
+              <button className="nav-btn" onClick={() => navigate("/login")}>
+                Login
+              </button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
