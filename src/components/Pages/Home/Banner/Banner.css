@@ -1,0 +1,41 @@
+
+.banner{
+    background-image: url(../../../../images/banner2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.brand-logo{
+    width: 700px;
+}
+.name-logo{
+    width: 350px;
+}
+.gallery-btn{
+    
+    color: #0D1321;
+    padding: 5px 20px;
+    border: 1px solid #0D1321;
+    border-radius: 30px;
+}
+.gallery-btn:hover{
+    background-color: #0D1321;
+    color: #F0EBD8;
+}
+@media only screen and (max-width: 768px){
+    .banner{
+        height: 400px;
+    }
+    .brand-logo{
+        width: 350px;
+    }
+    .name-logo{
+        width: 250px;
+    }
+}
