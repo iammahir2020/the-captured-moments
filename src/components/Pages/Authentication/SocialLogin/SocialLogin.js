@@ -9,6 +9,7 @@ import {
 import {
   useSignInWithGoogle,
   useSignInWithGithub,
+  useSignInWithFacebook,
 } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
 import { useNavigate } from "react-router-dom";
@@ -16,20 +17,30 @@ import { useNavigate } from "react-router-dom";
 const SocialLogin = () => {
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
+    useSignInWithGithub(auth);
+  const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
+    useSignInWithFacebook(auth);
 
-  if (user || user1) {
-    console.log(user || user1);
-    navigate("/");
-  }
   useEffect(() => {
-    if (error || error1) {
-      setMessage(error?.message || error1?.message);
+    if (googleError || githubError || facebookError) {
+      setMessage(
+        googleError?.message || githubError?.message || facebookError?.message
+      );
     } else {
       setMessage("");
     }
-  }, [error, error1]);
+  }, [googleError, githubError, facebookError]);
+
+  if (googleUser || githubUser || facebookUser) {
+    // console.log(googleUser || githubUser);
+    navigate("/");
+  }
+  // if (googleLoading || githubLoading) {
+  //   return <Spinner></Spinner>;
+  // }
   return (
     <div>
       <div className="or-line">
@@ -48,7 +59,7 @@ const SocialLogin = () => {
           <FontAwesomeIcon className="footer-icon" icon={faGithub} />
           Continue with Github
         </button>
-        <button className="btn-facebook">
+        <button onClick={() => signInWithFacebook()} className="btn-facebook">
           <FontAwesomeIcon className="footer-icon" icon={faFacebookSquare} />
           Continue with Facebook
         </button>

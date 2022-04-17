@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-
 import {
   useSignInWithEmailAndPassword,
   useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
-
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import Spinner from "../../../Shared/Spinner/Spinner";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -66,6 +65,9 @@ const Login = () => {
     toast("Password Reset Email Sent!");
   };
 
+  // if (loading || sending) {
+  //   return <Spinner></Spinner>;
+  // }
   return (
     <div className="container form-container">
       <h2 className="text-center">Please Login</h2>

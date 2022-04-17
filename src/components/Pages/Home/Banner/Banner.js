@@ -13,7 +13,7 @@ const Banner = () => {
       <h6>Welcome</h6>
       {user ? (
         <>
-          <h4 className="text-danger">{user?.email}</h4>
+          {/* <h4 className="text-danger">{user?.email}</h4> */}
           <h4 className="text-danger">{user?.displayName}</h4>
         </>
       ) : (
