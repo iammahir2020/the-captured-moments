@@ -6,8 +6,9 @@ import "./Service.css";
 const Service = ({ service }) => {
   return (
     <div className="service-card">
-      <h2>{service.name}</h2>
-      <h4>${service.price}</h4>
+      <h3>{service.name}</h3>
+      <h2>${service.price}</h2>
+      <hr />
       {service.features.map((feature) => (
         <div className="feature">
           <p>

@@ -7,7 +7,7 @@
 }
 
 
-@media only screen and (min-width: 577px) and  (max-width: 768px){
+@media only screen and (min-width: 577px) and  (max-width: 1200px){
     .services-container{
         grid-template-columns: repeat(2,1fr);
         }
