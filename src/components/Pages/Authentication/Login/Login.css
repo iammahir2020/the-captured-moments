@@ -1,0 +1,91 @@
+.form-container{
+    margin-top: 50px;
+    color: #18223b;
+}
+.form-container Form{
+    width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border: 3px solid #18223b;
+}
+
+.form-toggle{
+    margin-top: 20px;
+    color: rgb(134, 134, 134);
+}
+.form-toggle a{
+    text-decoration: none;
+    color: #18223b;
+    font-weight: 700;
+} 
+.form-toggle a:hover{
+    text-decoration: underline;
+    color: #18223b;
+} 
+.agreement a{
+    text-decoration: none;
+    color: #f6ce3e;
+}
+.agreement a:hover{
+    text-decoration: underline;
+    color: #ffc800;
+}
+.or-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width: 200px;
+    border-top: 1px solid black;
+}
+.or{
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social-login{
+    width: 500px;
+    margin: 10px auto 50px;
+    padding: 0 30px;
+    /* background-color: white;
+    border: 3px solid #18223b; */
+}
+.social-login button{
+    padding: 5px 0;
+    border: 1px solid #18223b;
+    border-radius: 30px;
+    width: 100%;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.btn-facebook{
+    background-color: rgb(42, 133, 230);
+    color: white;
+}
+.btn-github{
+    background-color: black;
+    color: white;
+}
+.btn-google{
+    background-color: rgb(179, 45, 27);
+    color: white;
+}
+/* @media only screen and (min-width: 577px) and  (max-width: 768px){
+    .form-container Form{
+        background-color: aqua;
+        padding: 30px;
+    }
+} */
+@media only screen and (max-width: 576px) {
+    .form-container Form{
+        width: 350px;
+        padding: 30px 20px;
+    }
+    .social-login{
+        width: 350px;
+        padding: 30px 20px;
+    }
+}

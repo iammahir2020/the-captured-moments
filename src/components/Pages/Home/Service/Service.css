@@ -17,7 +17,7 @@
     color: #F0EBD8;
     font-size: 18px;
 }
-.service-card button{
+.service-checkout{
     padding: 5px 20px;
     border: 1px solid #F0EBD8;
     border-radius: 30px;
@@ -25,5 +25,5 @@
     color: #0D1321;
     position: absolute;
     bottom: 3%;
-    left: 30%;
+    left: 31%;
 }

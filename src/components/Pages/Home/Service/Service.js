@@ -19,7 +19,7 @@ const Service = ({ service }) => {
       ))}
 
       <br />
-      <button>Check Out</button>
+      <button className="service-checkout">Check Out</button>
     </div>
   );
 };
