@@ -10,13 +10,16 @@ const Banner = () => {
   console.log(user);
   return (
     <div className="banner">
-      {user && (
+      <h6>Welcome</h6>
+      {user ? (
         <>
-          <h6>Welcome</h6>
           <h4 className="text-danger">{user?.email}</h4>
-          <h6>to</h6>
+          <h4 className="text-danger">{user?.displayName}</h4>
         </>
+      ) : (
+        <h4 className="text-danger">Guest</h4>
       )}
+      <h6>to</h6>
 
       <img className="brand-logo" src={logoDark} alt="" />
       <h6>By</h6>
