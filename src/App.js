@@ -5,10 +5,12 @@ import Home from "./components/Pages/Home/Home/Home";
 import About from "./components/Pages/About/About";
 import CheckOut from "./components/Pages/CheckOut/CheckOut";
 import PageNotFound from "./components/Pages/PageNotFound/PageNotFound";
-// import Services from "./components/Pages/Home/Services/Services";
+import Blogs from "./components/Pages/Blogs/Blogs";
+import Login from "./components/Pages/Authentication/Login/Login";
+import Register from "./components/Pages/Authentication/Register/Register";
 
 import { Route, Routes } from "react-router-dom";
-import Blogs from "./components/Pages/Blogs/Blogs";
+
 function App() {
   return (
     <div className="backgroundImg">
@@ -19,6 +21,8 @@ function App() {
         {/* <Route path="/services" element={<Services></Services>}></Route> */}
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>

@@ -1,6 +1,9 @@
 .navbar{
 background-color: #0D1321;
 }
+.logo{
+    width:  300px;
+}
 .navbar a{
     font-size: 18px;
 }
@@ -16,4 +19,16 @@ background-color: #0D1321;
     color: #0D1321;
     background-color: #F0EBD8;
     border: 1px solid #0D1321;
+}
+
+
+@media only screen and (min-width: 577px) and  (max-width: 768px){
+    .logo{
+        width:  250px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .logo{
+        width:  200px;
+    }
 }

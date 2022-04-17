@@ -17,7 +17,7 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand as={NavLink} to="/">
-          <img src={logoLight} style={{ height: "40px" }} alt="logoLight" />
+          <img src={logoLight} className="logo" alt="logoLight" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -36,10 +36,10 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <button className="nav-btn" onClick={() => navigate("/")}>
+            <button className="nav-btn" onClick={() => navigate("/login")}>
               Login
             </button>
-            <button className="nav-btn" onClick={() => navigate("/")}>
+            <button className="nav-btn" onClick={() => navigate("/register")}>
               Logout
             </button>
           </Nav>
