@@ -7,8 +7,5 @@ background-color: #0D1321;
 .icon{
 font-size: 25px;
 margin-right: 10px;
-}
-.dropItem{
-    display: flex;
-    align-items: center;
+color: #F0EBD8;
 }

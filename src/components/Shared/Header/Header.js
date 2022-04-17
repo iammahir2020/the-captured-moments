@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import logoLight from "../../../images/logoLight.png";
 import { NavLink } from "react-router-dom";
@@ -12,7 +12,13 @@ import {
 
 const Header = () => {
   return (
-    <Navbar className="navbar" collapseOnSelect expand="lg" variant="dark">
+    <Navbar
+      sticky="top"
+      className="navbar"
+      collapseOnSelect
+      expand="lg"
+      variant="dark"
+    >
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           <img src={logoLight} style={{ height: "40px" }} alt="logoLight" />
@@ -26,24 +32,16 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/checkout">
               Check Out
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/blogs">
+              Blogs
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/about">
               About Me
             </Nav.Link>
           </Nav>
-          <Nav className="mx-auto">
+          <Nav className="ms-auto">
             <Nav.Link as={NavLink} to="/">
               Login
-            </Nav.Link>
-          </Nav>
-          <Nav className="social">
-            <Nav.Link href="https://www.instagram.com/" target="blank">
-              <FontAwesomeIcon className="icon" icon={faInstagram} />
-            </Nav.Link>
-            <Nav.Link href="https://www.facebook.com/" target="blank">
-              <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
-            </Nav.Link>
-            <Nav.Link href="https://www.pinterest.com/" target="blank">
-              <FontAwesomeIcon className="icon" icon={faPinterest} />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
