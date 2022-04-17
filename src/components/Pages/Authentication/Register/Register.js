@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGoogle,
-  faFacebookSquare,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
 import auth from "../../../../firebase.init";
 import {
   useCreateUserWithEmailAndPassword,
   useSendEmailVerification,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -70,9 +65,9 @@ const Register = () => {
     }
   }, [error, verificationError, updateError]);
 
-  if (user) {
-    navigate("/");
-  }
+  // if (user) {
+  //   navigate("/");
+  // }
 
   const handleUserRegistration = async (event) => {
     event.preventDefault();
@@ -85,9 +80,12 @@ const Register = () => {
     }
     console.log(name, email.value, password.value, confirm.value);
     await createUserWithEmailAndPassword(email.value, password.value);
-    await sendEmailVerification(email);
     await updateProfile({ displayName: name });
+    await sendEmailVerification(email);
   };
+  if (user) {
+    navigate("/");
+  }
   return (
     <div className="container form-container">
       <h2 className="text-center">Please Register</h2>
@@ -154,25 +152,7 @@ const Register = () => {
         </p>
       </Form>
 
-      <div className="or-line">
-        <div className="line"></div>
-        <p className="or">OR</p>
-        <div className="line"></div>
-      </div>
-      <div className="social-login">
-        <button className="btn-google">
-          <FontAwesomeIcon className="footer-icon" icon={faGoogle} />
-          Continue with Google
-        </button>
-        <button className="btn-github">
-          <FontAwesomeIcon className="footer-icon" icon={faGithub} />
-          Continue with Github
-        </button>
-        <button className="btn-facebook">
-          <FontAwesomeIcon className="footer-icon" icon={faFacebookSquare} />
-          Continue with Facebook
-        </button>
-      </div>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };

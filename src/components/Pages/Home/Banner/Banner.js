@@ -7,12 +7,13 @@ import auth from "../../../../firebase.init";
 
 const Banner = () => {
   const [user, loading, error] = useAuthState(auth);
+  console.log(user);
   return (
     <div className="banner">
       {user && (
         <>
           <h6>Welcome</h6>
-          <h4 className="text-danger">{user?.displayName}</h4>
+          <h4 className="text-danger">{user?.email}</h4>
           <h6>to</h6>
         </>
       )}

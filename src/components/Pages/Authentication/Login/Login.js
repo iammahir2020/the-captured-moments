@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   useSignInWithEmailAndPassword,
   useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
-import {
-  faGoogle,
-  faFacebookSquare,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -107,26 +104,8 @@ const Login = () => {
         </p>
       </Form>
 
-      <div className="or-line">
-        <div className="line"></div>
-        <p className="or">OR</p>
-        <div className="line"></div>
-      </div>
+      <SocialLogin></SocialLogin>
 
-      <div className="social-login">
-        <button className="btn-google">
-          <FontAwesomeIcon className="footer-icon" icon={faGoogle} />
-          Continue with Google
-        </button>
-        <button className="btn-github">
-          <FontAwesomeIcon className="footer-icon" icon={faGithub} />
-          Continue with Github
-        </button>
-        <button className="btn-facebook">
-          <FontAwesomeIcon className="footer-icon" icon={faFacebookSquare} />
-          Continue with Facebook
-        </button>
-      </div>
       <ToastContainer />
     </div>
   );
