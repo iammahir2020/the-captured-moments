@@ -1,0 +1,20 @@
+[
+    {
+        "_id":1,
+        "name": "Saver Package",
+        "price": 600,
+        "features":["50 Printed Photo","200 Digital Photo","Photo Album"]
+    },
+    {
+        "_id":2,
+        "name": "Standard Package",
+        "price": 1000,
+        "features":["80 Printed Photo","400 Digital Photo","Photo Album","5 Photo Binding"]
+    },
+    {
+        "_id":3,
+        "name": "Premium Package",
+        "price": 1500,
+        "features":["200 Printed Photo","Unlimited Digital Photo","1 Cinematographic Video", "Photo Album", "20 Photo Binding", "1 Mega Photo Collage"]
+    }
+]

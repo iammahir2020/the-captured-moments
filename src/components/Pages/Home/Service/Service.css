@@ -1,0 +1,28 @@
+.service-card{
+    box-shadow: 0 3px 10px #0D1321;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+.service-card:hover{
+    background-color:white;
+}
+.feature{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0D1321;
+    font-size: 18px;
+}
+.service-card button{
+    padding: 5px 20px;
+    border: 1px solid #0D1321;
+    border-radius: 30px;
+    background-color: #0D1321;
+    color: #F0EBD8;
+    position: absolute;
+    bottom: 3%;
+    left: 35%;
+}
+

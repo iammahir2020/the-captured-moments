@@ -2,15 +2,11 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import logoLight from "../../../images/logoLight.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faFacebookSquare,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Navbar
       sticky="top"
@@ -40,9 +36,12 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/">
+            <button className="nav-btn" onClick={() => navigate("/")}>
               Login
-            </Nav.Link>
+            </button>
+            <button className="nav-btn" onClick={() => navigate("/")}>
+              Logout
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>

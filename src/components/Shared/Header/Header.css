@@ -4,8 +4,16 @@ background-color: #0D1321;
 .navbar a{
     font-size: 18px;
 }
-.icon{
-font-size: 25px;
-margin-right: 10px;
-color: #F0EBD8;
+.nav-btn{
+    font-size: 17px;
+    color: #F0EBD8;
+    background-color: #0D1321;
+    border: 1px solid #F0EBD8;
+    border-radius: 20px;
+    padding: 5px 30px;
+}
+.nav-btn:hover{
+    color: #0D1321;
+    background-color: #F0EBD8;
+    border: 1px solid #0D1321;
 }

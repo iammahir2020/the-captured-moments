@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -41,4 +42,5 @@
   background-image: url("./images/background1.png") ;
   background-repeat: repeat;
   background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
 }
