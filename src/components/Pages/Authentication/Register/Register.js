@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Register.css";
 import auth from "../../../../firebase.init";
 import {
@@ -9,9 +9,12 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import Loading from "../../../Shared/Loading/Loading";
 
 const Register = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [email, setEmail] = useState({ value: "", error: "" });
   const [password, setPassword] = useState({ value: "", error: "" });
   const [confirm, setConfirm] = useState({ value: "", error: "" });
@@ -25,6 +28,8 @@ const Register = () => {
     useSendEmailVerification(auth);
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const from = location.state?.from?.pathname || "/";
 
   const handleEmailBlur = (event) => {
     if (
@@ -65,16 +70,12 @@ const Register = () => {
     }
   }, [error, verificationError, updateError]);
 
-  // if (user) {
-  //   navigate("/");
-  // }
-
   const handleUserRegistration = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     if (password.value !== confirm.value) {
-      console.log("email:" + password.value);
-      console.log("confirm:" + confirm.value);
+      // console.log("email:" + password.value);
+      // console.log("confirm:" + confirm.value);
       setConfirm({ value: "", error: "Password do not match." });
       return;
     }
@@ -82,9 +83,15 @@ const Register = () => {
     await createUserWithEmailAndPassword(email.value, password.value);
     await updateProfile({ displayName: name });
     await sendEmailVerification(email);
+    // navigate(from, { replace: true });
   };
+
+  if (loading || sending || updating) {
+    return <Loading></Loading>;
+  }
+
   if (user) {
-    navigate("/");
+    navigate(from, { replace: true });
   }
   return (
     <div className="container form-container">
