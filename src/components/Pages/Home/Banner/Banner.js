@@ -4,10 +4,14 @@ import logoDark from "../../../../images/logoDark.png";
 import nameLogo from "../../../../images/mahir1.png";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
+import Loading from "../../../Shared/Loading/Loading";
 
 const Banner = () => {
   const [user, loading, error] = useAuthState(auth);
   console.log(user);
+  if (loading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="banner">
       <h6>Welcome</h6>
