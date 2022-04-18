@@ -12,10 +12,12 @@ import {
   useSignInWithFacebook,
 } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import Loading from "../../../Shared/Loading/Loading";
 
 const SocialLogin = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [message, setMessage] = useState("");
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
@@ -23,6 +25,8 @@ const SocialLogin = () => {
     useSignInWithGithub(auth);
   const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
     useSignInWithFacebook(auth);
+
+  const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     if (googleError || githubError || facebookError) {
@@ -36,11 +40,11 @@ const SocialLogin = () => {
 
   if (googleUser || githubUser || facebookUser) {
     // console.log(googleUser || githubUser);
-    navigate("/");
+    navigate(from, { replace: true });
   }
-  // if (googleLoading || githubLoading) {
-  //   return <Spinner></Spinner>;
-  // }
+  if (googleLoading || githubLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div>
       <div className="or-line">
