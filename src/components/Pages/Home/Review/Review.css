@@ -1,19 +1,23 @@
 .review-card{
     border-radius: 20px;
     padding: 20px 10px 10px;
-    text-align: center;
-    position: relative;
     background-color:#18223b;
     color: #F0EBD8;
     box-shadow: 0 3px 10px #0D1321;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+}
+.review-img{
+    text-align: center;
 }
 
-.review-card img{
-    margin-bottom: 20px;
-    width: 40%;
+.review-img img{
+    width: 70%;
     border-radius: 50%;
 }
-.review-card p{
+.review-info p{
     font-weight: 200;
     font-style: italic;
 }

@@ -5,7 +5,7 @@ import "./PageNotFound.css";
 const PageNotFound = () => {
   const navigate = useNavigate();
   return (
-    <div className="about-container">
+    <div className="page-container">
       <h2>Sorry! The page you're looking for can not be found.</h2>
       <button onClick={() => navigate("/")} className="gallery-btn">
         Go back to Home
