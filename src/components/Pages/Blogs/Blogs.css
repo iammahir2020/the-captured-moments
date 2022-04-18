@@ -1,0 +1,9 @@
+.blogs-card{
+    background-color: white;
+    padding: 20px;
+    color: #18223b;
+    border: 1px solid #18223b;
+    margin: 20px 0;
+    text-align: justify;
+    text-justify: inter-word;
+}

@@ -7,9 +7,11 @@
     color: #18223b;
     height: 70vh;
 }
-/* .about-info{
+.about-info{
+    text-align: justify;
+    text-justify: inter-word;
     padding: 20px;
-} */
+}
 .about-info h2{
 display: inline;
 }
