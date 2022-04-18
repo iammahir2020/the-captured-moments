@@ -15,20 +15,26 @@ const Footer = () => {
   const year = date.getFullYear();
   return (
     <div className="footer-container">
-      <div className="social-container">
-        <Nav.Link href="https://www.instagram.com/" target="blank">
-          <FontAwesomeIcon className="footer-icon" icon={faInstagram} />
-        </Nav.Link>
-        <Nav.Link href="https://www.facebook.com/" target="blank">
-          <FontAwesomeIcon className="footer-icon" icon={faFacebookSquare} />
-        </Nav.Link>
-        <Nav.Link href="https://www.pinterest.com/" target="blank">
-          <FontAwesomeIcon className="footer-icon" icon={faPinterest} />
-        </Nav.Link>
-      </div>
       <div className="links-container">
         <div className="container display">
           <img src={logoLight} alt="" />
+          <div className="social">
+            <p>Social Links</p>
+            <div className="social-container">
+              <Nav.Link href="https://www.instagram.com/" target="blank">
+                <FontAwesomeIcon className="footer-icon" icon={faInstagram} />
+              </Nav.Link>
+              <Nav.Link href="https://www.facebook.com/" target="blank">
+                <FontAwesomeIcon
+                  className="footer-icon"
+                  icon={faFacebookSquare}
+                />
+              </Nav.Link>
+              <Nav.Link href="https://www.pinterest.com/" target="blank">
+                <FontAwesomeIcon className="footer-icon" icon={faPinterest} />
+              </Nav.Link>
+            </div>
+          </div>
           <div className="links">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/blogs">Blogs</NavLink>

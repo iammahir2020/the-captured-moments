@@ -1,5 +1,5 @@
 .social-container{
-    background-color: #3E5C76;
+    /* background-color: #3E5C76; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +10,21 @@
     margin-right: 10px;
 }
 .links-container{
-    background-color: #1D2D44;
+    background-color: #18223b;
     padding: 10px 0;
+}
+.social{
+    color: #F0EBD8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .display{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 .links-container img{
     height: 30px;
