@@ -8,7 +8,6 @@ import PageNotFound from "./components/Pages/PageNotFound/PageNotFound";
 import Blogs from "./components/Pages/Blogs/Blogs";
 import Login from "./components/Pages/Authentication/Login/Login";
 import Register from "./components/Pages/Authentication/Register/Register";
-
 import { Route, Routes } from "react-router-dom";
 import RequireAuth from "./components/Pages/Authentication/RequireAuth/RequireAuth";
 
@@ -26,7 +25,6 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        {/* <Route path="/services" element={<Services></Services>}></Route> */}
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>

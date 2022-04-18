@@ -3,18 +3,21 @@
         "_id":1,
         "name": "Saver Package",
         "price": 600,
-        "features":["50 Printed Photo","200 Digital Photo","Photo Album"]
+        "photo":"https://images.unsplash.com/photo-1529636798458-92182e662485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+        "features":"50 Printed Photo, 200 Digital Photo & 1 Photo Album"
     },
     {
         "_id":2,
         "name": "Standard Package",
         "price": 1000,
-        "features":["80 Printed Photo","400 Digital Photo","Photo Album","5 Photo Binding"]
+        "photo":"https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "features":"80 Printed Photo, 400 Digital Photo, 1 Photo Album & 5 Photo Binding"
     },
     {
         "_id":3,
         "name": "Premium Package",
         "price": 1500,
-        "features":["200 Printed Photo","Unlimited Digital Photo","1 Cinematographic Video", "Photo Album", "20 Photo Binding", "1 Mega Photo Collage"]
+        "photo":"https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+        "features":"200 Printed Photo, Unlimited Digital Photo, 1 Cinematographic Video, 1 Photo Album, 20 Photo Binding & 1 Mega Photo Collage"
     }
 ]

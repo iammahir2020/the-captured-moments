@@ -1,7 +1,7 @@
 .service-card{
     box-shadow: 0 3px 10px #0D1321;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     position: relative;
     background-color:#18223b;
@@ -9,6 +9,12 @@
 }
 .service-card:hover{
     background-color:#0D1321;
+}
+.service-card img{
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
 }
 .feature{
     display: flex;

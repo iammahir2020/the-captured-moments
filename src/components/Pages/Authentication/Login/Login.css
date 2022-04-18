@@ -92,11 +92,11 @@
 } */
 @media only screen and (max-width: 576px) {
     .form-container Form{
-        width: 350px;
+        width: 325px;
         padding: 30px 20px;
     }
     .social-login{
-        width: 350px;
+        width: 325px;
         padding: 30px 20px;
     }
 }
