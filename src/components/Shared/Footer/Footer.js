@@ -31,14 +31,13 @@ const Footer = () => {
           <img src={logoLight} alt="" />
           <div className="links">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/checkout">Check Out</NavLink>
             <NavLink to="/blogs">Blogs</NavLink>
             <NavLink to="/about">About Me</NavLink>
           </div>
         </div>
       </div>
       <div className="copy-right-conatiner">
-        <p>All Rights Reserved {year} &copy; the.captured_moments</p>
+        <p>All Rights Reserved &copy; {year} the.captured_moments</p>
       </div>
     </div>
   );
