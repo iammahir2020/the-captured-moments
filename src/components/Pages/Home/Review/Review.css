@@ -1,0 +1,15 @@
+.review-card{
+    border-radius: 20px;
+    padding: 20px 10px 10px;
+    text-align: center;
+    position: relative;
+    background-color:#18223b;
+    color: #F0EBD8;
+    box-shadow: 0 3px 10px #0D1321;
+}
+
+.review-card img{
+    margin-bottom: 20px;
+    width: 40%;
+    border-radius: 50%;
+}

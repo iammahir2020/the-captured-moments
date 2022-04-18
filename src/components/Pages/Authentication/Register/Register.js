@@ -5,7 +5,6 @@ import "./Register.css";
 import auth from "../../../../firebase.init";
 import {
   useCreateUserWithEmailAndPassword,
-  useSendEmailVerification,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -22,10 +21,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
-
-  const [sendEmailVerification, sending, verificationError] =
-    useSendEmailVerification(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -61,32 +57,26 @@ const Register = () => {
   };
 
   useEffect(() => {
-    if (error || verificationError || updateError) {
-      setErrorMessage(
-        error?.message || verificationError?.message || updateError?.message
-      );
+    if (error || updateError) {
+      setErrorMessage(error?.message || updateError?.message);
     } else {
       setErrorMessage("");
     }
-  }, [error, verificationError, updateError]);
+  }, [error, updateError]);
 
   const handleUserRegistration = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     if (password.value !== confirm.value) {
-      // console.log("email:" + password.value);
-      // console.log("confirm:" + confirm.value);
       setConfirm({ value: "", error: "Password do not match." });
       return;
     }
     console.log(name, email.value, password.value, confirm.value);
     await createUserWithEmailAndPassword(email.value, password.value);
     await updateProfile({ displayName: name });
-    await sendEmailVerification(email);
-    // navigate(from, { replace: true });
   };
 
-  if (loading || sending || updating) {
+  if (loading || updating) {
     return <Loading></Loading>;
   }
 

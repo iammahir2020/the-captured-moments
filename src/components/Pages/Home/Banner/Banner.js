@@ -8,7 +8,7 @@ import Loading from "../../../Shared/Loading/Loading";
 
 const Banner = () => {
   const [user, loading, error] = useAuthState(auth);
-  console.log(user);
+  // console.log(user);
   if (loading) {
     return <Loading></Loading>;
   }
@@ -17,7 +17,6 @@ const Banner = () => {
       <h6>Welcome</h6>
       {user ? (
         <>
-          {/* <h4 className="text-danger">{user?.email}</h4> */}
           <h4 className="text-danger">{user?.displayName}</h4>
         </>
       ) : (
