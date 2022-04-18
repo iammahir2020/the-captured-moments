@@ -1,5 +1,9 @@
-// import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheckCircle,
+  faBookBookmark,
+  faBookmark,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Service.css";
@@ -24,10 +28,13 @@ const Service = ({ service }) => {
 
       <br />
       <button
-        onClick={() => navigate("/checkout")}
+        onClick={() => navigate(`/checkout/${service.name}`)}
         className="service-checkout"
       >
-        Check Out
+        <span>Book Now</span>{" "}
+        <span className="btn-icon">
+          <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon>
+        </span>
       </button>
     </div>
   );

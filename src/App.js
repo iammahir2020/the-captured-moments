@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route
-          path="/checkout"
+          path="/checkout/:serviceName"
           element={
             <RequireAuth>
               <CheckOut></CheckOut>

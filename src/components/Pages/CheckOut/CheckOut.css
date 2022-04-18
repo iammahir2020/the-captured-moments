@@ -1,0 +1,18 @@
+.checkout-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #2a3550;
+}
+.checkout-container Form{
+    width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border: 3px solid #18223b;
+}
+.checkout-container Form p{
+    background-color: #f8da6f;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #18223b;
+}
