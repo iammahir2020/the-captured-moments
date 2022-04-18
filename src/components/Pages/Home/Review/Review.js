@@ -7,7 +7,7 @@ const Review = ({ review }) => {
       <img src={review.photo} alt="" />
       <h4>{review.name}</h4>
       <hr />
-      <p>{review.comment}</p>
+      <p>"{review.comment}"</p>
     </div>
   );
 };
