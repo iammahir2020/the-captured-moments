@@ -1,14 +1,15 @@
 .service-card{
-    box-shadow: 0 3px 10px #0D1321;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
     position: relative;
-    background-color:#18223b;
-    color: #F0EBD8;
+    background-color:white;
+    color: #18223b;
+    border: 1px solid #2a3550;
 }
 .service-card:hover{
-    background-color:#0D1321;
+    box-shadow: 0 3px 10px #0D1321;
+
 }
 .service-card img{
     margin-bottom: 20px;
@@ -27,8 +28,8 @@
     padding: 5px 20px;
     border: 1px solid #F0EBD8;
     border-radius: 30px;
-    background-color: #F0EBD8;
-    color: #0D1321;
+    background-color: #2a3550;
+    color: #F0EBD8;
     position: absolute;
     bottom: 3%;
     left: 31%;
