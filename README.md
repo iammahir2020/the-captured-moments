@@ -11,16 +11,17 @@ Live Site Link: [https://the-captured-moments.web.app/](https://the-captured-mom
 ## Site Features
 
 1. User authentication with email & password added (User registration and login).
-2. Login using google,facebook and github feature added.
-3. Protected Route added (checkout page requires users authentication)
-4. Home Page with static banner section, services section and review section.
-5. Navigation bar and footer added.
-6. See Blogs Page for Q&A.
-7. Error 404, Page not found feature added.
-8. About me page added.
-9. It is a Single Page Application so no page refresh is executed.
-10. Active Link Feature has been implemented.
-11. Device Responsive.
+2. User Email verification
+3. Login using google,facebook and github feature added.
+4. Protected Route added (checkout page requires users authentication)
+5. Home Page with static banner section, services section and review section.
+6. Navigation bar and footer added.
+7. See Blogs Page for Q&A.
+8. Error 404, Page not found feature added.
+9. About me page added.
+10. It is a Single Page Application so no page refresh is executed.
+11. Active Link Feature has been implemented.
+12. Device Responsive.
 
 ## Technologies Used
 
