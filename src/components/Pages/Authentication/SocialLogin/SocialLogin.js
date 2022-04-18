@@ -39,10 +39,9 @@ const SocialLogin = () => {
   }, [googleError, githubError, facebookError]);
 
   if (googleUser || githubUser || facebookUser) {
-    // console.log(googleUser || githubUser);
     navigate(from, { replace: true });
   }
-  if (googleLoading || githubLoading) {
+  if (googleLoading || githubLoading || facebookLoading) {
     return <Loading></Loading>;
   }
   return (
