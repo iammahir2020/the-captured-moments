@@ -7,12 +7,33 @@
     width: 500px;
     margin: 30px auto;
     padding: 30px;
-    background-color: white;
-    border: 3px solid #18223b;
+    background-color: #18223b;
+    color: white;
 }
 .checkout-container Form p{
-    background-color: #f8da6f;
+    background-color: #fdd135;
     padding: 10px;
     font-size: 20px;
+    color: #18223b;
+}
+.checkout-btn{
+    padding: 10px 0;
     border: 1px solid #18223b;
+    border-radius: 30px;
+    background-color: #F0EBD8;
+    color: #18223b;
+    width: 100%;
+    font-weight: 700;
+}
+.checkout-btn:hover{
+    
+    background-color: #f8da6f;
+    color: #0D1321;
+}
+
+@media only screen and (max-width: 576px) {
+    .checkout-container Form{
+        width: 325px;
+        padding: 30px 20px;
+    }
 }

@@ -11,8 +11,8 @@ const CheckOut = () => {
     event.preventDefault();
     const name = event.target.name.value;
     Swal.fire({
-      title: "Booking Complete!",
-      text: `${name}, thank you for the bookig.`,
+      title: `${name}, booking Complete!`,
+      text: "Thank you for the booking.",
       icon: "success",
       confirmButtonText: "Done",
     });
@@ -61,7 +61,7 @@ const CheckOut = () => {
             required
           />
         </Form.Group>
-        <button className="form-btn" type="submit">
+        <button className="checkout-btn" type="submit">
           Checkout
         </button>
       </Form>
