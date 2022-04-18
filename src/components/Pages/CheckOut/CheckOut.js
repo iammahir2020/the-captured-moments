@@ -3,13 +3,24 @@ import { Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import "./CheckOut.css";
 import Swal from "sweetalert2";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 
 const CheckOut = () => {
+  const [user, loading, error] = useAuthState(auth);
+  let email;
+  let name;
+  if (user) {
+    console.log(user?.email);
+    console.log(user?.displayName);
+    email = user?.email;
+    name = user?.displayName;
+  }
   const params = useParams();
   const navigate = useNavigate();
   const handleCheckout = (event) => {
     event.preventDefault();
-    const name = event.target.name.value;
+    // const name = event.target.name.value;
     Swal.fire({
       title: `${name}, booking Complete!`,
       text: "Thank you for the booking.",
@@ -32,6 +43,8 @@ const CheckOut = () => {
             placeholder="Enter name"
             name="name"
             required
+            value={name}
+            readOnly
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -40,7 +53,8 @@ const CheckOut = () => {
             type="email"
             placeholder="Enter email"
             name="email"
-            required
+            value={email}
+            readOnly
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicAddress">
