@@ -1,5 +1,3 @@
-# Assignment 10
-
 ## The Captured Moments
 
 Website Name: [The Captured Moments](https://the-captured-moments.web.app/)
